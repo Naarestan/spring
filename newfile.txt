@@ -1,0 +1,5 @@
+File 1 (test) to practice cloning of my repo locally.
+
+File 2 (text) - added this change for the second commit
+
+File 3 (text) - another change that I made to the file for the sake of practicing git commands
