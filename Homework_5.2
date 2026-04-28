@@ -1,0 +1,27 @@
+"""
+    Homework 5.2 -- line_by_date()
+    Author: Nastaran Mahmoodzadeh (nm4929@nyu.edu)
+    Date: April 28th, 2026
+"""
+
+source_file = 'dated_file.csv'
+target_file = 'sorted_file.csv'
+
+def line_by_date(this_line):
+    m, d, y = (this_line.split(','))[0].split('/')
+    return ((y), (m), (d))
+
+fh = open(source_file)
+lines = fh.readlines()
+
+sorted_line = sorted(lines, key=line_by_date)
+
+wfh = open(target_file, 'w')
+
+for line in sorted_line:
+    wfh.write(line)
+
+wfh.close()
+fh.close()
+
+print(f'Wrote to {target_file}!')
